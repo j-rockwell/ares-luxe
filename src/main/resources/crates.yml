@@ -1,0 +1,270 @@
+crates:
+  VOTE:
+    display_name: '&eVote Crate'
+    firework_color:
+      r: 255
+      g: 255
+      b: 85
+    loot:
+      DIAMOND_HELMET:
+        id: 310
+        name: '&eVote Helmet'
+        chance: 5
+      DIAMOND_CHESTPLATE:
+        id: 311
+        name: '&eVote Chestplate'
+        chance: 5
+      DIAMOND_LEGGINGS:
+        id: 312
+        name: '&eVote Leggings'
+        chance: 5
+      DIAMOND_BOOTS:
+        id: 313
+        name: '&eVote Boots'
+        chance: 5
+      DIAMOND_SWORD:
+        id: 276
+        name: '&eVote Sword'
+        chance: 5
+      COOKED_BEEF:
+        id: 364
+        amount: 16
+        chance: 25
+      COOKED_CHICKEN:
+        id: 366
+        chance: 25
+        amount: 16
+      GOLDEN_APPLE:
+        id: 322
+        durability: 0
+        amount: 3
+        chance: 5
+      ENDER_PEARL:
+        id: 368
+        amount: 3
+        chance: 10
+      STONE:
+        id: 1
+        durability: 0
+        amount: 64
+        chance: 25
+      IRON_INGOT:
+        id: 265
+        amount: 16
+        chance: 10
+      GOLD_INGOT:
+        id: 266
+        amount: 8
+        chance: 10
+      DIAMOND:
+        id: 264
+        amount: 3
+        chance: 10
+      EXPERIENCE_BOTTLE:
+        id: 384
+        amount: 8
+        chance: 10
+      NETHER_QUARTZ_ORE:
+        id: 153
+        amount: 16
+        chance: 25
+      COAL:
+        id: 263
+        amount: 32
+        chance: 25
+      ENCHANTMENT_TABLE:
+        id: 116
+        chance: 5
+      PACKED_ICE:
+        id: 174
+        amount: 64
+        chance: 25
+      SPECKLED_MELON:
+        id: 382
+        amount: 8
+        chance: 10
+      BLAZE_POWDER:
+        id: 377
+        amount: 8
+        chance: 10
+      MAGMA_CREAM:
+        id: 378
+        amount: 8
+        chance: 10
+      GHAST_TEAR:
+        id: 370
+        amount: 4
+        chance: 5
+      NETHER_WART:
+        id: 372
+        amount: 32
+        chance: 20
+      SOUL_SAND:
+        id: 88
+        amount: 32
+        chance: 25
+      SPONGE:
+        id: 19
+        durability: 0
+        chance: 5
+        name: '&eVote Bastion'
+      JUKEBOX:
+        id: 84
+        chance: 5
+        name: '&eVote Snitch'
+      SKULL:
+        id: 397
+        durability: 1
+        chance: 2
+  CAYDEN:
+    display_name: '&7[&d&lCayden Crate&7]'
+    firework_color:
+      r: 255
+      g: 85
+      b: 255
+    loot:
+      DIAMOND_HELMET:
+        id: 310
+        name: '&d&lCayden Helmet'
+        chance: 1
+        enchantments:
+          PROTECTION: 4
+          UNBREAKING: 3
+      DIAMOND_CHESTPLATE:
+        id: 311
+        name: '&d&lCayden Chestplate'
+        chance: 1
+        enchantments:
+          PROTECTION: 4
+          UNBREAKING: 3
+      DIAMOND_LEGGINGS:
+        id: 312
+        name: '&d&lCayden Leggings'
+        chance: 5
+        enchantments:
+          PROTECTION: 4
+          UNBREAKING: 3
+      DIAMOND_BOOTS:
+        id: 313
+        name: '&d&lCayden Boots'
+        chance: 5
+        enchantments:
+          PROTECTION: 4
+          UNBREAKING: 3
+          FEATHERFALLING: 4
+      DIAMOND_BOOTS2:
+        id: 313
+        name: '&d&lCayden Boots'
+        chance: 5
+        enchantments:
+          PROTECTION: 4
+          UNBREAKING: 3
+          DEPTHSTRIDER: 3
+      DIAMOND_SWORD:
+        id: 276
+        name: '&d&lCayden Sword'
+        chance: 1
+        enchantments:
+          SHARPNESS: 5
+          UNBREAKING: 3
+          FIREASPECT: 2
+          LOOTING: 3
+      BOW:
+        id: 261
+        name: '&d&lCayden Bow'
+        chance: 1
+        enchantments:
+          POWER: 5
+          UNBREAKING: 3
+          FLAME: 1
+          INFINITY: 1
+          PUNCH: 2
+      DIAMOND_PICKAXE:
+        id: 278
+        name: '&d&lCayden Pickaxe'
+        chance: 1
+        enchantments:
+          EFFICIENCY: 5
+          UNBREAKING: 3
+          FORTUNE: 3
+      GOLDEN_AXE:
+        id: 286
+        name: '&d&lCayden Axe'
+        chance: 1
+        enchantments:
+          EFFICIENCY: 5
+          UNBREAKING: 3
+      GOLDEN_APPLE:
+        id: 322
+        durability: 0
+        chance: 5
+        amount: 8
+      GOLDEN_APPLE2:
+        id: 322
+        durability: 1
+        chance: 1
+      ENDER_PEARL:
+        id: 368
+        amount: 8
+        chance: 10
+      IRON_INGOT:
+        id: 265
+        amount: 32
+        chance: 15
+      GOLD_INGOT:
+        id: 266
+        amount: 32
+        chance: 10
+      SADDLE:
+        id: 329
+        chance: 10
+      DIAMOND_HORSE_ARMOR:
+        id: 419
+        chance: 10
+      HORSE_EGG:
+        id: 383
+        durability: 100
+        chance: 10
+      END_PORTAL:
+        id: 120
+        chance: 10
+        amount: 3
+      SPECKLED_MELON:
+        id: 382
+        chance: 25
+        amount: 32
+      GHAST_TEAR:
+        id: 370
+        chance: 20
+        amount: 8
+      COOKED_BEEF:
+        id: 364
+        chance: 25
+        amount: 64
+      OBSIDIAN:
+        id: 49
+        chance: 25
+        amount: 64
+      EXPERIENCE_BOTTLE:
+        id: 384
+        chance: 15
+        amount: 32
+      BEACON:
+        id: 138
+        chance: 1
+      JUKEBOX:
+        id: 84
+        chance: 15
+        name: '&d&lCayden Snitch'
+        amount: 8
+      ACID_BLOCK:
+        id: 41
+        name: '&d&Cayden Acid Block'
+        chance: 5
+        amount: 4
+      BASTION_BLOCK:
+        id: 19
+        durability: 0
+        chance: 10
+        amount: 4
+        name: '&d&lCayden Bastion Block'

@@ -140,14 +140,14 @@ crates:
       DIAMOND_LEGGINGS:
         id: 312
         name: '&d&lCayden Leggings'
-        chance: 5
+        chance: 1
         enchantments:
           PROTECTION: 4
           UNBREAKING: 3
       DIAMOND_BOOTS:
         id: 313
         name: '&d&lCayden Boots'
-        chance: 5
+        chance: 1
         enchantments:
           PROTECTION: 4
           UNBREAKING: 3
@@ -155,7 +155,7 @@ crates:
       DIAMOND_BOOTS2:
         id: 313
         name: '&d&lCayden Boots'
-        chance: 5
+        chance: 1
         enchantments:
           PROTECTION: 4
           UNBREAKING: 3
@@ -259,7 +259,7 @@ crates:
         amount: 8
       ACID_BLOCK:
         id: 41
-        name: '&d&Cayden Acid Block'
+        name: '&d&lCayden Acid Block'
         chance: 5
         amount: 4
       BASTION_BLOCK:

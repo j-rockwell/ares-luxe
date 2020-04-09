@@ -23,6 +23,7 @@ public final class CrateLoot {
         return new ItemBuilder()
                 .setMaterial(material)
                 .setName(name)
+                .setData(durability)
                 .setAmount(amount)
                 .addEnchant(enchantments)
                 .addLore(ChatColor.GREEN + "" + chance + "% chance")
@@ -32,6 +33,7 @@ public final class CrateLoot {
     public ItemStack getItemAsDrop() {
         return new ItemBuilder()
                 .setMaterial(material)
+                .setData(durability)
                 .setAmount(amount)
                 .addEnchant(enchantments)
                 .build();

@@ -29,14 +29,29 @@ public final class RankManager {
         Bukkit.getPluginManager().registerEvents(new RankListener(this), plugin);
     }
 
+    /**
+     * Returns a Rank matching the provided name
+     * @param name Rank Name
+     * @return Rank
+     */
     public Rank getRankByName(String name) {
         return rankRepository.stream().filter(rank -> rank.getName().equalsIgnoreCase(name)).findFirst().orElse(null);
     }
 
+    /**
+     * Returns an Immutable Set of Ranks the provided Player has access to
+     * @param player Player
+     * @return Immutable Set of Ranks
+     */
     public ImmutableSet<Rank> getRanks(Player player) {
         return ImmutableSet.copyOf(rankRepository.stream().filter(rank -> player.hasPermission(rank.getPermission())).collect(Collectors.toSet()));
     }
 
+    /**
+     * Returns the highest rank the provided player has access to
+     * @param player Player
+     * @return Rank
+     */
     public Rank getHighestRank(Player player) {
         final List<Rank> ranks = Lists.newArrayList(getRanks(player));
 
@@ -50,6 +65,11 @@ public final class RankManager {
         return ranks.get(0);
     }
 
+    /**
+     * Returns the formatted name of the provided Player
+     * @param player Player
+     * @return Display Name
+     */
     public String formatName(Player player) {
         final Rank rank = getHighestRank(player);
 

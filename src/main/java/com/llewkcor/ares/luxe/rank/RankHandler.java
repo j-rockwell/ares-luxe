@@ -12,6 +12,9 @@ import org.bukkit.configuration.file.YamlConfiguration;
 public final class RankHandler {
     @Getter public final RankManager manager;
 
+    /**
+     * Handles loading all ranks from file
+     */
     public void loadRanks() {
         final YamlConfiguration config = Configs.getConfig(manager.getPlugin(), "ranks");
 

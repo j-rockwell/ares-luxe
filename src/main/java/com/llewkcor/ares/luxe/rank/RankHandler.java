@@ -16,6 +16,10 @@ public final class RankHandler {
      * Handles loading all ranks from file
      */
     public void loadRanks() {
+        if (!manager.getRankRepository().isEmpty()) {
+            manager.getRankRepository().clear();
+        }
+
         final YamlConfiguration config = Configs.getConfig(manager.getPlugin(), "ranks");
 
         for (String rankId : config.getConfigurationSection("ranks").getKeys(false)) {

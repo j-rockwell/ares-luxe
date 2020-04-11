@@ -45,6 +45,7 @@ public final class CrateHandler {
         for (String crateId : config.getConfigurationSection("crates").getKeys(false)) {
             final List<CrateLoot> loot = Lists.newArrayList();
             final String displayName = ChatColor.translateAlternateColorCodes('&', config.getString("crates." + crateId + ".display_name"));
+            final String dailyPermission = config.getString("crates." + crateId + ".daily_permission");
             Color fireworkColor = Color.WHITE;
 
             if (config.get("crates." + crateId + ".firework_color") != null) {
@@ -108,7 +109,7 @@ public final class CrateHandler {
                 loot.add(new CrateLoot(name, material, (short)durability, amount, chance, enchantments));
             }
 
-            final Crate crate = new Crate(crateId, displayName, fireworkColor, loot);
+            final Crate crate = new Crate(crateId, displayName, dailyPermission, fireworkColor, loot);
             manager.getCrateRepository().add(crate);
         }
 

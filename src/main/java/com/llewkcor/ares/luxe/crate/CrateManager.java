@@ -1,5 +1,6 @@
 package com.llewkcor.ares.luxe.crate;
 
+import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import com.llewkcor.ares.commons.location.BLocatable;
 import com.llewkcor.ares.luxe.Luxe;
@@ -9,9 +10,11 @@ import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public final class CrateManager {
     @Getter public final Luxe plugin;
@@ -44,6 +47,15 @@ public final class CrateManager {
      */
     public Crate getCrateByItem(ItemStack item) {
         return crateRepository.stream().filter(crate -> crate.match(item)).findFirst().orElse(null);
+    }
+
+    /**
+     * Returns an Immutable Set containing all crates the provided player has access to
+     * @param player Player
+     * @return Immutable Set of Crates
+     */
+    public ImmutableSet<Crate> getCrateByPermission(Player player) {
+        return ImmutableSet.copyOf(crateRepository.stream().filter(crate -> player.hasPermission(crate.getDailyPermission())).collect(Collectors.toSet()));
     }
 
     /**

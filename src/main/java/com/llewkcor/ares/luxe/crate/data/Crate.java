@@ -2,7 +2,6 @@ package com.llewkcor.ares.luxe.crate.data;
 
 import com.google.common.collect.Lists;
 import com.llewkcor.ares.commons.item.ItemBuilder;
-import com.llewkcor.ares.commons.logger.Logger;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.bukkit.Color;
@@ -18,6 +17,7 @@ import java.util.Random;
 public final class Crate {
     @Getter public final String name;
     @Getter public final String displayName;
+    @Getter public final String dailyPermission;
     @Getter public final Color fireworkColor;
     @Getter public final List<CrateLoot> loot;
 

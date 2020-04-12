@@ -55,7 +55,7 @@ public final class CrateManager {
      * @return Immutable Set of Crates
      */
     public ImmutableSet<Crate> getCrateByPermission(Player player) {
-        return ImmutableSet.copyOf(crateRepository.stream().filter(crate -> player.hasPermission(crate.getDailyPermission())).collect(Collectors.toSet()));
+        return ImmutableSet.copyOf(crateRepository.stream().filter(crate -> crate.getDailyPermission() != null && player.hasPermission(crate.getDailyPermission())).collect(Collectors.toSet()));
     }
 
     /**

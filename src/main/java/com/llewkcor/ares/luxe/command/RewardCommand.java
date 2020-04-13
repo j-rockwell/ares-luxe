@@ -17,10 +17,6 @@ import org.bukkit.entity.Player;
 public final class RewardCommand extends BaseCommand {
     @Getter public final Luxe plugin;
 
-    /*
-    /reward give player crate crateName amount
-     */
-
     @CommandAlias("reward|rewards")
     @Description("View your rewards")
     public void onRewards(Player player, @Optional String username) {

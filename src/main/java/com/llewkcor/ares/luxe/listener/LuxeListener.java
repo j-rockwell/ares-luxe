@@ -1,8 +1,10 @@
 package com.llewkcor.ares.luxe.listener;
 
+import com.comphenix.protocol.ProtocolLibrary;
 import com.google.common.base.Joiner;
 import com.llewkcor.ares.commons.util.bukkit.Scheduler;
 import com.llewkcor.ares.luxe.Luxe;
+import com.llewkcor.ares.luxe.util.LuxeUtil;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.bukkit.Bukkit;
@@ -40,5 +42,15 @@ public final class LuxeListener implements Listener {
     @EventHandler
     public void onServerPing(ServerListPingEvent event) {
         event.setMotd(Joiner.on("\n").join(plugin.getConfiguration().getPingMotd()));
+    }
+
+    @EventHandler
+    public void onPlayerJoin(PlayerJoinEvent event) {
+        final Player player = event.getPlayer();
+
+        final String header = Joiner.on(ChatColor.RESET + "\n").join(plugin.getConfiguration().getTabHeader());
+        final String footer = Joiner.on(ChatColor.RESET + "\n").join(plugin.getConfiguration().getTabFooter());
+
+        LuxeUtil.sendTab(ProtocolLibrary.getProtocolManager(), player, header, footer);
     }
 }

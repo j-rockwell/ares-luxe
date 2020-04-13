@@ -2,6 +2,11 @@ premium_features:
   shout_cooldown: 86400
   premium_slot_start: 200
   premium_store_link: 'https://store.playares.com'
+tab_display:
+  header:
+    - 'Welcome to Ares'
+  footer:
+    - 'playares.com'
 motd:
   server_list:
     - '&4&lAres'

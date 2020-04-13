@@ -16,6 +16,8 @@ public final class LuxeConfig {
     @Getter public String storeLink;
     @Getter public List<String> joinMotd;
     @Getter public List<String> pingMotd;
+    @Getter public List<String> tabHeader;
+    @Getter public List<String> tabFooter;
 
     public LuxeConfig(Luxe plugin) {
         this.plugin = plugin;
@@ -28,8 +30,18 @@ public final class LuxeConfig {
         this.premiumSlotAccessStart = config.getInt("premium_features.premium_slot_start");
         this.storeLink = config.getString("premium_features.premium_store_link");
 
+        this.tabHeader = Lists.newArrayList();
+        this.tabFooter = Lists.newArrayList();
         this.joinMotd = Lists.newArrayList();
         this.pingMotd = Lists.newArrayList();
+
+        for (String line : config.getStringList("tab_display.header")) {
+            tabHeader.add(ChatColor.translateAlternateColorCodes('&', line));
+        }
+
+        for (String line : config.getStringList("tab_display.footer")) {
+            tabFooter.add(ChatColor.translateAlternateColorCodes('&', line));
+        }
 
         for (String line : config.getStringList("motd.server_list")) {
             pingMotd.add(ChatColor.translateAlternateColorCodes('&', line));

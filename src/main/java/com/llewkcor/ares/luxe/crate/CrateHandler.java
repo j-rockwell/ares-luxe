@@ -213,7 +213,20 @@ public final class CrateHandler {
                 block.getWorld().dropItem(block.getLocation().add(0.5, 1.0, 0.5), item.getItemAsDrop());
 
                 if (player.isOnline()) {
-                    player.sendMessage(ChatColor.GRAY + "Received " + ChatColor.RESET + "x" + item.getAmount() + " " + item.getName() + ChatColor.GRAY + "!");
+                    final String rarity;
+
+                    if (item.getChance() <= 1) {
+                        Worlds.playSound(block.getLocation(), Sound.NOTE_PIANO);
+                        rarity = ChatColor.GOLD + "" + ChatColor.BOLD + "EXTREMELY RARE";
+                    } else if (item.getChance() <= 10) {
+                        rarity = ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "RARE";
+                    } else if (item.getChance() <= 15) {
+                        rarity = ChatColor.BLUE + "" + ChatColor.BOLD + "UNCOMMON";
+                    } else {
+                        rarity = ChatColor.GRAY + "" + ChatColor.BOLD + "COMMON";
+                    }
+
+                    player.sendMessage(ChatColor.GRAY + "Received " + rarity + " " + ChatColor.RESET + "x" + item.getAmount() + " " + item.getName() + ChatColor.GRAY + "!");
                 }
             });
 

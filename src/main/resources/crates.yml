@@ -127,9 +127,8 @@ crates:
       g: 85
       b: 255
     loot:
-      DIAMOND_HELMET:
-        id: 310
-        name: '&d&lCayden Helmet'
+      PROTECTION_BOOK:
+        id: 403
         chance: 1
         enchantments:
           PROTECTION: 4

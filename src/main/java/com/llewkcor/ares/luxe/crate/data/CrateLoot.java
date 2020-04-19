@@ -7,6 +7,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.EnchantmentStorageMeta;
 
 import java.util.Map;
 
@@ -20,6 +21,25 @@ public final class CrateLoot {
     @Getter public final Map<Enchantment, Integer> enchantments;
 
     public ItemStack getItem() {
+        if (material.equals(Material.ENCHANTED_BOOK)) {
+            final ItemStack book = new ItemBuilder()
+                    .setName(name)
+                    .setMaterial(material)
+                    .setAmount(amount)
+                    .addLore(ChatColor.GREEN + "" + chance + "% chance")
+                    .build();
+
+            final EnchantmentStorageMeta meta = (EnchantmentStorageMeta)book.getItemMeta();
+
+            enchantments.keySet().forEach(enchantment -> {
+                final int level = enchantments.get(enchantment);
+                meta.addStoredEnchant(enchantment, level, false);
+            });
+
+            book.setItemMeta(meta);
+            return book;
+        }
+
         return new ItemBuilder()
                 .setMaterial(material)
                 .setName(name)
@@ -31,6 +51,24 @@ public final class CrateLoot {
     }
 
     public ItemStack getItemAsDrop() {
+        if (material.equals(Material.ENCHANTED_BOOK)) {
+            final ItemStack book = new ItemBuilder()
+                    .setName(name)
+                    .setMaterial(material)
+                    .setAmount(amount)
+                    .build();
+
+            final EnchantmentStorageMeta meta = (EnchantmentStorageMeta)book.getItemMeta();
+
+            enchantments.keySet().forEach(enchantment -> {
+                final int level = enchantments.get(enchantment);
+                meta.addStoredEnchant(enchantment, level, false);
+            });
+
+            book.setItemMeta(meta);
+            return book;
+        }
+
         return new ItemBuilder()
                 .setMaterial(material)
                 .setData(durability)

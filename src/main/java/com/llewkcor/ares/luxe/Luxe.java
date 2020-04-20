@@ -38,6 +38,7 @@ public final class Luxe extends JavaPlugin {
 
         crateManager.getHandler().loadCrates();
         rankManager.getHandler().loadRanks();
+        rankManager.getHandler().setupScoreboard();
 
         commandManager.registerCommand(new CrateCommand(this));
         commandManager.registerCommand(new LuxeCommand(this));

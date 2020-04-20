@@ -7,8 +7,10 @@ import com.llewkcor.ares.luxe.Luxe;
 import com.llewkcor.ares.luxe.rank.data.Rank;
 import com.llewkcor.ares.luxe.rank.listener.RankListener;
 import lombok.Getter;
+import lombok.Setter;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.scoreboard.Scoreboard;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -20,6 +22,7 @@ public final class RankManager {
     @Getter public final Luxe plugin;
     @Getter public final RankHandler handler;
     @Getter public final Set<Rank> rankRepository;
+    @Getter @Setter public Scoreboard rankScoreboard;
 
     public RankManager(Luxe plugin) {
         this.plugin = plugin;

@@ -3,53 +3,62 @@ ranks:
     name: 'Silver'
     display_name: '&7Silver'
     prefix: '&7'
+    scoreboard_prefix: '&7'
     permission: 'rank.silver'
     weight: 5
   GOLD:
     name: 'Gold'
     display_name: '&6Gold'
     prefix: '&6'
+    scoreboard_prefix: '&6'
     permission: 'rank.gold'
     weight: 10
   SAPPHIRE:
     name: 'Sapphire'
     display_name: '&9Sapphire'
     prefix: '&1✪ &9'
+    scoreboard_prefix: '&1✪ &9'
     permission: 'rank.sapphire'
     weight: 15
   EMERALD:
     name: 'Emerald'
     display_name: '&aEmerald'
     prefix: '&2✪ &a'
+    scoreboard_prefix: '&2✪ &a'
     permission: 'rank.emerald'
     weight: 20
   RUBY:
     name: 'Ruby'
     display_name: '&cRuby'
     prefix: '&4✪ &c'
+    scoreboard_prefix: '&4✪ &c'
     permission: 'rank.ruby'
     weight: 25
   MODERATOR:
     name: 'Moderator'
     display_name: '&3Moderator'
     prefix: '&7[&3Mod&7] &3'
+    scoreboard_prefix: '&7[&3Mod&7] &3'
     permission: 'rank.mod'
     weight: 35
   ADMIN:
     name: 'Administrator'
     display_name: '&4Administrator'
     prefix: '&7[&4Admin&7] &4'
+    scoreboard_prefix: '&7[&4Admin&7] &4'
     permission: 'rank.admin'
     weight: 40
   DEV:
     name: 'Developer'
     display_name: '&5Developer'
     prefix: '&7[&5Dev&7] &5'
+    scoreboard_prefix: '&7[&5Dev&7] &5'
     permission: 'rank.dev'
     weight: 45
   PARTNER:
     name: 'Partner'
     display_name: '&dPartner'
     prefix: '&7[&dPartner&7]&d &o'
+    scoreboard_prefix: '&7[&dP&7]&d &o'
     permission: 'rank.partner'
     weight: 30

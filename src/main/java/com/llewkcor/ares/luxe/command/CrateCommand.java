@@ -4,7 +4,6 @@ import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.*;
 import com.llewkcor.ares.commons.promise.SimplePromise;
 import com.llewkcor.ares.luxe.Luxe;
-import com.llewkcor.ares.luxe.crate.menu.CratePreviewMenu;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.bukkit.ChatColor;
@@ -15,12 +14,6 @@ import org.bukkit.entity.Player;
 @AllArgsConstructor
 public final class CrateCommand extends BaseCommand {
     @Getter public final Luxe plugin;
-
-    /*
-    /crate view <name>
-    /crate give <player> <crate> <amount>
-    /crate list
-     */
 
     @Subcommand("list")
     @Description("View a list of all available crate types")

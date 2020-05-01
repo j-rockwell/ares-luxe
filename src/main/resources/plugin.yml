@@ -1,5 +1,0 @@
-name: ares-luxe
-version: 1.0.0
-main: com.llewkcor.ares.luxe.Luxe
-author: John Rockwell
-depends: [ares-core]

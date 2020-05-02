@@ -27,12 +27,14 @@ public final class RankListener implements Listener {
         final Player player = event.getPlayer();
         final Rank rank = manager.getHighestRank(player);
 
-        if (rank == null || manager.getRankScoreboard() == null) {
+        if (manager.getRankScoreboard() == null) {
             return;
         }
 
-        final Team team = manager.getRankScoreboard().getTeam(rank.getName());
-        team.addEntry(player.getName());
+        if (rank != null) {
+            final Team team = manager.getRankScoreboard().getTeam(rank.getName());
+            team.addEntry(player.getName());
+        }
 
         player.setScoreboard(manager.getRankScoreboard());
     }

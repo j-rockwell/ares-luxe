@@ -36,6 +36,10 @@ public final class CrateManager {
      * @return Crate
      */
     public Crate getCrateByName(String name) {
+        if (name == null) {
+            return null;
+        }
+
         return crateRepository.stream().filter(crate -> ChatColor.stripColor(crate.getName()).equalsIgnoreCase(name)).findFirst().orElse(null);
     }
 
@@ -45,6 +49,10 @@ public final class CrateManager {
      * @return Crate
      */
     public Crate getCrateByItem(ItemStack item) {
+        if (item == null) {
+            return null;
+        }
+
         return crateRepository.stream().filter(crate -> crate.match(item)).findFirst().orElse(null);
     }
 

@@ -35,6 +35,8 @@ public final class ClaimableDAO {
             result.add(crate);
         }
 
+        crateCursor.close();
+
         // Create other loading methods here...
 
         return ImmutableList.copyOf(result);
